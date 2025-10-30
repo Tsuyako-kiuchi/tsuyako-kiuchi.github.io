@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMSF商業施設計画電話帳</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #0056b3;
+        }
+        .search-container {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .search-container input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .search-container button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .search-container button:hover {
+            background-color: #0056b3;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .contact-item strong {
+            color: #0056b3;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-item a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>FMSF商業施設計画電話帳</h1>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="searchContacts()" placeholder="キーワードを入力して検索...">
+        <button onclick="searchContacts()">検索</button>
+    </div>
+
+    <ul class="contact-list" id="contactList">
+        <li class="contact-item">
+            <strong>平沢靖聡</strong><br>
+            会社名: トヨタ不動産株式会社<br>
+            役職: 一級建築士 主査 兼 室長<br>
+            住所: 〒100-0006東京都千代田区有楽町1-1-2 東京ミッドタウン日比谷 11F<br>
+            電話: <a href="tel:070-6533-7096">070-6533-7096</a><br>
+            FAX: 03-6743-9664<br>
+            携帯: なし<br>
+            メール: <a href="mailto:yasuaki.hirasawa@toyotafudosan.com">yasuaki.hirasawa@toyotafudosan.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>斎藤秀俊</strong><br>
+            会社名: トヨタ不動産株式会社<br>
+            役職: 部長<br>
+            住所: 〒100-0006東京都千代田区有楽町1-1-2 東京ミッドタウン日比谷 11F<br>
+            電話: <a href="tel:080-6924-4591">080-6924-4591</a><br>
+            FAX: 03-6743-9664<br>
+            携帯: なし<br>
+            メール: <a href="mailto:hidetoshi.saito@toyotafudosan.com">hidetoshi.saito@toyotafudosan.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>渡辺英一</strong><br>
+            会社名: トヨタ不動産株式会社<br>
+            役職: 課長<br>
+            住所: 〒100-0006東京都千代田区有楽町1-1-2 東京ミッドタウン日比谷 11F<br>
+            電話: <a href="tel:070-6588-8183">070-6588-8183</a><br>
+            FAX: 03-6743-9664<br>
+            携帯: なし<br>
+            メール: <a href="mailto:eiichi.watanabe@toyotafudosan.com">eiichi.watanabe@toyotafudosan.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>中村俊宏</strong><br>
+            会社名: トヨタ不動産株式会社<br>
+            役職: 課長<br>
+            住所: 〒100-0006東京都千代田区有楽町1-1-2 東京ミッドタウン日比谷 11F<br>
+            電話: <a href="tel:070-6525-6193">070-6525-6193</a><br>
+            FAX: 03-6743-9664<br>
+            携帯: なし<br>
+            メール: <a href="mailto:toshihiro.nakamura@toyotafudosan.com">toshihiro.nakamura@toyotafudosan.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>渡邉慎太郎</strong><br>
+            会社名: トヨタ不動産株式会社<br>
+            役職: 課長<br>
+            住所: 〒100-0006東京都千代田区有楽町1-1-2 東京ミッドタウン日比谷 11F<br>
+            電話: <a href="tel:070-5581-2947">070-5581-2947</a><br>
+            FAX: 03-6743-9664<br>
+            携帯: なし<br>
+            メール: <a href="mailto:shintaro.watanabe@toyotafudosan.com">shintaro.watanabe@toyotafudosan.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>坂川広行</strong><br>
+            会社名: トヨタ不動産株式会社<br>
+            役職: 係長<br>
+            住所: 〒100-0006東京都千代田区有楽町1-1-2 東京ミッドタウン日比谷 11F<br>
+            電話: <a href="tel:070-6533-4654">070-6533-4654</a><br>
+            FAX: 052-584-7117<br>
+            携帯: なし<br>
+            メール: <a href="mailto:hiroyuki.sakagawa@toyotafudosan.com">hiroyuki.sakagawa@toyotafudosan.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>鈴木章生</strong><br>
+            会社名: トヨタ不動産株式会社<br>
+            役職: なし<br>
+            住所: 〒100-0006東京都千代田区有楽町1-1-2 東京ミッドタウン日比谷 11F<br>
+            電話: <a href="tel:090-3760-7943">090-3760-7943</a><br>
+            FAX: 03-6743-9664<br>
+            携帯: なし<br>
+            メール: <a href="mailto:akio.suzuki@toyotafudosan.com">akio.suzuki@toyotafudosan.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>川口直人</strong><br>
+            会社名: トヨタ不動産株式会社<br>
+            役職: なし<br>
+            住所: 〒100-0006東京都千代田区有楽町1-1-2 東京ミッドタウン日比谷 11F<br>
+            電話: <a href="tel:080-6012-2574">080-6012-2574</a><br>
+            FAX: 03-6743-9664<br>
+            携帯: なし<br>
+            メール: <a href="mailto:naoto.kawaguchi@toyotafudosan.com">naoto.kawaguchi@toyotafudosan.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>生田目南</strong><br>
+            会社名: トヨタ不動産株式会社<br>
+            役職: なし<br>
+            住所: 〒100-0006東京都千代田区有楽町1-1-2 東京ミッドタウン日比谷 11F<br>
+            電話: <a href="tel:090-2057-4512">090-2057-4512</a><br>
+            FAX: 03-6743-9664<br>
+            携帯: なし<br>
+            メール: <a href="mailto:minami@toyotafudosan.com">minami@toyotafudosan.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>中野徹</strong><br>
+            会社名: (仮称)MV商業施設計画<br>
+            役職: 内装監理室<br>
+            住所: 〒110-0015 東京都台東区東上野1-8-2 オーイズミ東上野ビル西館7階A<br>
+            電話: <a href="tel:03-6803-0365">03-6803-0365</a><br>
+            FAX: なし<br>
+            携帯: <a href="tel:090-3623-5025">090-3623-5025</a><br>
+            メール: <a href="mailto:fuji-msf@bauhaus-m.com">fuji-msf@bauhaus-m.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>岩田賢二</strong><br>
+            会社名: (仮称)MV商業施設計画<br>
+            役職: 内装監理室<br>
+            住所: 〒110-0015 東京都台東区東上野1-8-2 オーイズミ東上野ビル西館7階A<br>
+            電話: <a href="tel:03-6803-0365">03-6803-0365</a><br>
+            FAX: なし<br>
+            携帯: <a href="tel:090-1684-8713">090-1684-8713</a><br>
+            メール: <a href="mailto:fuji-msf@bauhaus-m.com">fuji-msf@bauhaus-m.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>小笠原康介</strong><br>
+            会社名: 株式会社シェイドレーシング<br>
+            役職: なし<br>
+            住所: 〒410-1308静岡県駿東郡小山町大御神617番<br>
+            電話: <a href="tel:0550-20-1520">0550-20-1520</a><br>
+            FAX: 050-3730-9908<br>
+            携帯: <a href="tel:090-6355-3730">090-6355-3730</a><br>
+            メール: <a href="mailto:kosuke.ogasawara@shade-racing.com">kosuke.ogasawara@shade-racing.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>佐藤千尋</strong><br>
+            会社名: 株式会社トヨタエンタプライズ<br>
+            役職: なし<br>
+            住所: 〒410-1307静岡県駿東郡小山町中日向694 富士スピードウェイP8内<br>
+            電話: <a href="tel:0550-78-2555">0550-78-2555</a><br>
+            FAX: 0550-78-2557<br>
+            携帯: <a href="tel:080-5675-8095">080-5675-8095</a><br>
+            メール: <a href="mailto:chihiro.sato@toyota-ep.co.jp">chihiro.sato@toyota-ep.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>北地 英光</strong><br>
+            会社名: 株式会社 バウハウス丸栄<br>
+            役職: 企画開発本部 内装監理部 部長 2級建築施工管理技士<br>
+            住所: 〒453-0041 愛知県名古屋市中村区本陣通3-46<br>
+            電話: <a href="tel:052-483-1969">052-483-1969</a><br>
+            FAX: 052-483-1975<br>
+            携帯: <a href="tel:080-7011-6277">080-7011-6277</a><br>
+            メール: <a href="mailto:hidemitsu-kitaji@bauhaus-m.co.jp">hidemitsu-kitaji@bauhaus-m.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>日高 享介</strong><br>
+            会社名: 株式会社 バウハウス丸栄<br>
+            役職: 企画開発本部 内装監理部 チームマネジャー<br>
+            住所: 〒453-0041 愛知県名古屋市中村区本陣通3-46<br>
+            電話: <a href="tel:052-483-1969">052-483-1969</a><br>
+            FAX: 052-483-1975<br>
+            携帯: <a href="tel:080-7011-6369">080-7011-6369</a><br>
+            メール: <a href="mailto:kyousuke-hidaka@bauhaus-m.co.jp">kyousuke-hidaka@bauhaus-m.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>早崎理</strong><br>
+            会社名: 日建設計コンストラクション・マネジメント株式会社<br>
+            役職: ディレクター 認定コンストラクション・マネジャー<br>
+            住所: 〒112-0004東京都文京区後楽1-4-27<br>
+            電話: <a href="tel:03-5803-9770">03-5803-9770</a><br>
+            FAX: 03-5803-3440<br>
+            携帯: <a href="tel:080-6907-9328">080-6907-9328</a><br>
+            メール: <a href="mailto:osamu-hayasaki@nikken.jp">osamu-hayasaki@nikken.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>岩阪聡一郎</strong><br>
+            会社名: 日建設計コンストラクション・マネジメント株式会社<br>
+            役職: ディレクター 認定コンストラクション・マネジャー<br>
+            住所: 〒112-0004東京都文京区後楽1-4-27<br>
+            電話: <a href="tel:03-5803-9770">03-5803-9770</a><br>
+            FAX: 03-5803-3440<br>
+            携帯: なし<br>
+            メール: なし
+        </li>
+        <li class="contact-item">
+            <strong>飯田保</strong><br>
+            会社名: 日建設計コンストラクション・マネジメント株式会社<br>
+            役職: シニアアソシエイト 認定コンストラクション・マネジャー 一級建築士<br>
+            住所: 〒112-0004東京都文京区後楽1-4-27<br>
+            電話: <a href="tel:03-5803-9770">03-5803-9770</a><br>
+            FAX: 03-5803-3440<br>
+            携帯: <a href="tel:080-6791-8103">080-6791-8103</a><br>
+            メール: <a href="mailto:iida.tamotsu@nikken.jp">iida.tamotsu@nikken.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>松尾忠明</strong><br>
+            会社名: 日建設計コンストラクション・マネジメント株式会社<br>
+            役職: ディレクター 認定コンストラクション・マネジャー<br>
+            住所: 〒112-0004東京都文京区後楽1-4-27<br>
+            電話: <a href="tel:03-5803-9770">03-5803-9770</a><br>
+            FAX: 03-5803-3440<br>
+            携帯: <a href="tel:080-6620-6342">080-6620-6342</a><br>
+            メール: <a href="mailto:matsuo.tadaaki@nikken.jp">matsuo.tadaaki@nikken.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>高田和子</strong><br>
+            会社名: 日建設計コンストラクション・マネジメント株式会社<br>
+            役職: アソシエイト 一級建築士<br>
+            住所: 〒112-0004東京都文京区後楽1-4-27<br>
+            電話: <a href="tel:03-5803-9770">03-5803-9770</a><br>
+            FAX: 03-5803-3440<br>
+            携帯: <a href="tel:080-4093-6711">080-4093-6711</a><br>
+            メール: <a href="mailto:takada.kazuko@nikken.jp">takada.kazuko@nikken.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>安藤 拓也</strong><br>
+            会社名: 株式会社 三輪設計<br>
+            役職: 東京本社 執行役員 設計統括<br>
+            住所: 〒151-0053 東京都渋谷区代々木1-21-8 クリスタルハウス<br>
+            電話: <a href="tel:03-3320-3721">03-3320-3721</a><br>
+            FAX: 03-6800-1598<br>
+            携帯: <a href="tel:090-1709-2485">090-1709-2485</a><br>
+            メール: <a href="mailto:ando@miwa-sekkei.co.jp">ando@miwa-sekkei.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>菅野 伸一</strong><br>
+            会社名: 株式会社 三輪設計<br>
+            役職: 東京本社 設計室 リーダー<br>
+            住所: 〒151-0053 東京都渋谷区代々木1-21-8 クリスタルハウス<br>
+            電話: <a href="tel:03-3320-3721">03-3320-3721</a><br>
+            FAX: 03-6800-1598<br>
+            携帯: <a href="tel:070-1525-5554">070-1525-5554</a><br>
+            メール: <a href="mailto:sugano@miwa-sekkei.co.jp">sugano@miwa-sekkei.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>安田 茂好</strong><br>
+            会社名: 株式会社 三輪設計<br>
+            役職: なし<br>
+            住所: 〒151-0053 東京都渋谷区代々木1-21-8 クリスタルハウス<br>
+            電話: <a href="tel:03-3320-3721">03-3320-3721</a><br>
+            FAX: 03-6800-1598<br>
+            携帯: <a href="tel:080-4126-4844">080-4126-4844</a><br>
+            メール: <a href="mailto:yasuda@miwa-sekkei.co.jp">yasuda@miwa-sekkei.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>近藤 重好</strong><br>
+            会社名: 株式会社 三輪設計<br>
+            役職: 東京本社 監理室 総括室長<br>
+            住所: 〒151-0053 東京都渋谷区代々木1-21-8 クリスタルハウス<br>
+            電話: <a href="tel:03-3320-3721">03-3320-3721</a><br>
+            FAX: 03-6800-1598<br>
+            携帯: <a href="tel:090-8475-2422">090-8475-2422</a><br>
+            メール: <a href="mailto:kondo@miwa-sekkei.co.jp">kondo@miwa-sekkei.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>渡邉 義治</strong><br>
+            会社名: 株式会社 駿河調査設計<br>
+            役職: 技術監査室 二級建築士 行政書士<br>
+            住所: 〒412-0045 静岡県御殿場市川島田1921-4<br>
+            電話: <a href="tel:0550-89-5570">0550-89-5570</a><br>
+            FAX: 0550-89-3192<br>
+            携帯: なし<br>
+            メール: <a href="mailto:y-watanabe@sur-c.co.jp">y-watanabe@sur-c.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>田中 康仁</strong><br>
+            会社名: 株式会社 駿河調査設計<br>
+            役職: 技術部主任 測量士補<br>
+            住所: 〒412-0045 静岡県御殿場市川島田1921-4<br>
+            電話: <a href="tel:0550-89-5570">0550-89-5570</a><br>
+            FAX: 0550-89-3192<br>
+            携帯: なし<br>
+            メール: <a href="mailto:tanaka@sur-c.co.jp">tanaka@sur-c.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>石川 晃央</strong><br>
+            会社名: 株式会社乃村工藝社<br>
+            役職: 部長 Department Head 営業推進本部 第三事業部 営業2部 Sales Department 2, Account Management Division 3, Sales Activation Headquarters<br>
+            住所: 〒135-8622 東京都港区台場2-3-4<br>
+            電話: なし<br>
+            FAX: なし<br>
+            携帯: <a href="tel:080-2272-5235">080-2272-5235</a><br>
+            メール: <a href="mailto:ak.ishikawa@nomura-g.jp">ak.ishikawa@nomura-g.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>佐藤 一成</strong><br>
+            会社名: 株式会社乃村工藝社<br>
+            役職: 課長 Section Chief 営業推進本部 第三事業部 営業2部 第1課 Sales Activation Headquarters Account Management Division 3, Section 1, Sales Department 2<br>
+            住所: 〒135-8622 東京都港区台場2-3-4<br>
+            電話: なし<br>
+            FAX: なし<br>
+            携帯: <a href="tel:080-2272-4645">080-2272-4645</a><br>
+            メール: <a href="mailto:k.sato@nomura-g.jp">k.sato@nomura-g.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>須田浩太郎</strong><br>
+            会社名: 株式会社 乃村工藝社<br>
+            役職: デザイナー クリエイティブ本部 第一デザインセンター デザイン1部 デザインディレクションルーム ルームチーフ<br>
+            住所: 〒135-8622東京都港区台場2-3-4<br>
+            電話: なし<br>
+            FAX: なし<br>
+            携帯: <a href="tel:080-2272-5644">080-2272-5644</a><br>
+            メール: <a href="mailto:ko.suda@nomura-g.jp">ko.suda@nomura-g.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>丹下由加里</strong><br>
+            会社名: 株式会社 乃村工藝社<br>
+            役職: 主任 営業推進本部 第三事業部 営業2部 第1課<br>
+            住所: 〒135-8622東京都港区台場2-3-4<br>
+            電話: なし<br>
+            FAX: なし<br>
+            携帯: <a href="tel:080-2272-5050">080-2272-5050</a><br>
+            メール: <a href="mailto:y.tange@nomura-g.jp">y.tange@nomura-g.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>古内時子</strong><br>
+            会社名: 株式会社ふるうち設計室<br>
+            役職: 代表取締役・Landscape Architect<br>
+            住所: なし<br>
+            電話: <a href="tel:050-1744-2091">050-1744-2091</a><br>
+            FAX: なし<br>
+            携帯: <a href="tel:050-1744-2181">050-1744-2181</a><br>
+            メール: <a href="mailto:tfuruuchi@frd-studio.com">tfuruuchi@frd-studio.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>山原智美</strong><br>
+            会社名: 株式会社ふるうち設計室<br>
+            役職: なし<br>
+            住所: なし<br>
+            電話: <a href="tel:090-3131-1420">090-3131-1420</a><br>
+            FAX: 090-3131-1420<br>
+            携帯: なし<br>
+            メール: <a href="mailto:yamahara-t@frd-studio.com">yamahara-t@frd-studio.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>丹羽 和幸</strong><br>
+            会社名: 九尺設計 株式会社<br>
+            役職: 取締役副社長 第一設計室 室長 一級建築士 構造設計一級建築士<br>
+            住所: 〒460-0011 名古屋市中区大須4丁目10番32号 上前津KDビル4階 (本社) / 〒101-0026 東京都千代田区神田佐久間河岸51 第一スレートビル7階 (東京支店)<br>
+            電話: <a href="tel:052-263-0600">052-263-0600</a> (本社) / <a href="tel:03-5823-4802">03-5823-4802</a> (東京支店)<br>
+            FAX: 052-263-0605 (本社) / 03-5823-4803 (東京支店)<br>
+            携帯: なし<br>
+            メール: <a href="mailto:niwa@9jaku.com">niwa@9jaku.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>丹羽和幸</strong><br>
+            会社名: 九尺設計 株式会社<br>
+            役職: 取締役副社長 第一設計室 室長<br>
+            住所: 〒460-0011名古屋市中区大須4丁目10番32号 上前津KDビル4階<br>
+            電話: <a href="tel:052-263-0600">052-263-0600</a><br>
+            FAX: 052-263-0605<br>
+            携帯: なし<br>
+            メール: <a href="mailto:niwa@9jaku.com">niwa@9jaku.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>丹羽和幸</strong><br>
+            会社名: 九尺設計 株式会社<br>
+            役職: 取締役副社長 第一設計室 室長<br>
+            住所: 〒101-0026東京都千代田区神田佐久間河岸51 第一スレートビル7階<br>
+            電話: <a href="tel:03-5823-4802">03-5823-4802</a><br>
+            FAX: 03-5823-4803<br>
+            携帯: なし<br>
+            メール: <a href="mailto:niwa@9jaku.com">niwa@9jaku.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>山田 規久臣</strong><br>
+            会社名: 株式会社 カケン<br>
+            役職: 建築設備士・一級管工事施工管理技士 設計・積算課 次長<br>
+            住所: 〒462-8540 名古屋市北区大杉1丁目4番14号<br>
+            電話: <a href="tel:052-931-9231">052-931-9231</a>(代)<br>
+            FAX: 052-931-4127<br>
+            携帯: <a href="tel:090-3255-8696">090-3255-8696</a><br>
+            メール: <a href="mailto:k-yamada@e-kaken.co.jp">k-yamada@e-kaken.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>山田規久臣</strong><br>
+            会社名: 株式会社 カケン<br>
+            役職: 設計・積算課 次長<br>
+            住所: 〒462-8540名古屋市北区大杉1丁目4番14号<br>
+            電話: <a href="tel:052-931-9231">052-931-9231</a><br>
+            FAX: 052-931-4127<br>
+            携帯: <a href="tel:090-3255-8696">090-3255-8696</a><br>
+            メール: <a href="mailto:k-yamada@e-kaken.co.jp">k-yamada@e-kaken.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>伊藤 哲也</strong><br>
+            会社名: 有限会社 静南工房<br>
+            役職: 代表取締役<br>
+            住所: 〒421-0304 静岡県榛原郡吉田町神戸150-4<br>
+            電話: <a href="tel:0548-32-8756">0548-32-8756</a><br>
+            FAX: 0548-33-0237<br>
+            携帯: <a href="tel:090-8739-7381">090-8739-7381</a><br>
+            メール: <a href="mailto:t.ito@seinankobo.co.jp">t.ito@seinankobo.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>森下 智浩</strong><br>
+            会社名: 有限会社 静南工房<br>
+            役職: 取締役<br>
+            住所: 〒426-0067 静岡県藤枝市前島2丁目2-14-102号<br>
+            電話: <a href="tel:054-668-9903">054-668-9903</a><br>
+            FAX: 054-668-9904<br>
+            携帯: なし<br>
+            メール: なし
+        </li>
+        
+        <li class="contact-item">
+            <strong>浅田</strong><br>
+            会社名: 浅田建築事務所<br>
+            役職: なし<br>
+            住所: なし<br>
+            電話: <a href="tel:0557-51-2202">0557-51-2202</a><br>
+            FAX: 0557-51-2202<br>
+            携帯: <a href="tel:090-3954-9629">090-3954-9629</a><br>
+            メール: <a href="mailto:asadashigeki@yahoo.co.jp">asadashigeki@yahoo.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>中根且統</strong><br>
+            会社名: 三建設備工業株式会社<br>
+            役職: 常務執行役員 名古屋支店 支店長<br>
+            住所: 〒450-0003 名古屋市中村区名駅南二丁目一四番一九号 名古屋ビル二三階<br>
+            電話: <a href="tel:052-561-4101">052-561-4101</a><br>
+            FAX: 052-561-8100<br>
+            携帯: なし<br>
+            メール: <a href="mailto:k-nakane@skk.jp">k-nakane@skk.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>鈴木哲也</strong><br>
+            会社名: 三建設備工業株式会社<br>
+            役職: 支店次長 エンジニアリング部長<br>
+            住所: 〒450-0003名古屋市中村区名駅南2-14-19 住友生命名古屋ビル23階<br>
+            電話: <a href="tel:052-561-4102">052-561-4102</a><br>
+            FAX: 052-561-8100<br>
+            携帯: <a href="tel:090-7951-4934">090-7951-4934</a><br>
+            メール: <a href="mailto:t-suzuki@skk.jp">t-suzuki@skk.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>内野勝之</strong><br>
+            会社名: 三建設備工業株式会社<br>
+            役職: 部次長・工事長<br>
+            住所: 〒420-0034静岡県静岡市葵区常磐町2-13-1 住友生命静岡常磐町ビル7階<br>
+            電話: <a href="tel:054-255-8001">054-255-8001</a><br>
+            FAX: なし<br>
+            携帯: なし<br>
+            メール: なし
+        </li>
+        <li class="contact-item">
+            <strong>齊藤秀斗</strong><br>
+            会社名: 三建設備工業株式会社<br>
+            役職: 課長代理<br>
+            住所: 〒420-0034静岡県静岡市葵区常磐町2-13-1 住友生命静岡常磐町ビル7階<br>
+            電話: <a href="tel:054-255-8001">054-255-8001</a><br>
+            FAX: 054-252-7743<br>
+            携帯: <a href="tel:080-2373-0571">080-2373-0571</a><br>
+            メール: <a href="mailto:s-saito@skk.jp">s-saito@skk.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>山田幸範</strong><br>
+            会社名: 三建設備工業株式会社<br>
+            役職: 主査<br>
+            住所: 〒420-0034静岡県静岡市葵区常磐町2-13-1 住友生命静岡常磐町ビル7階<br>
+            電話: <a href="tel:054-255-8001">054-255-8001</a><br>
+            FAX: 054-252-7743<br>
+            携帯: <a href="tel:090-4964-5799">090-4964-5799</a><br>
+            メール: <a href="mailto:yuki-yamada@skk.jp">yuki-yamada@skk.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>村井智光</strong><br>
+            会社名: 三建設備工業株式会社<br>
+            役職: 担当部長・工事長<br>
+            住所: 〒450-0003名古屋市中村区名駅南2-14-19 住友生命名古屋ビル23階<br>
+            電話: <a href="tel:052-561-4102">052-561-4102</a><br>
+            FAX: 052-561-8100<br>
+            携帯: <a href="tel:090-4265-7646">090-4265-7646</a><br>
+            メール: <a href="mailto:t-murai@skk.jp">t-murai@skk.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>後藤和彦</strong><br>
+            会社名: 三建設備工業株式会社<br>
+            役職: 所長 兼 次長・工事長<br>
+            住所: 〒420-0034静岡県静岡市葵区常磐町2-13-1 住友生命静岡常磐町ビル7階<br>
+            電話: <a href="tel:054-255-8001">054-255-8001</a><br>
+            FAX: 054-252-7743<br>
+            携帯: <a href="tel:090-2615-6594">090-2615-6594</a><br>
+            メール: <a href="mailto:k-goto@skk.jp">k-goto@skk.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>神田雅章</strong><br>
+            会社名: 三建設備工業株式会社<br>
+            役職: 技術統括本部副本部長 兼エンジニアリング統括部長<br>
+            住所: 〒104-0033東京都中央区新川一丁目17番21号 茅場町ファーストビル2階<br>
+            電話: <a href="tel:03-6280-2569">03-6280-2569</a><br>
+            FAX: なし<br>
+            携帯: <a href="tel:090-4670-2375">090-4670-2375</a><br>
+            メール: <a href="mailto:m-kanda@skk.jp">m-kanda@skk.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>恩田行男</strong><br>
+            会社名: 三建設備工業株式会社<br>
+            役職: 部長<br>
+            住所: 〒104-0033東京都中央区新川一丁目17番21号 茅場町ファーストビル2階<br>
+            電話: <a href="tel:03-6280-2569">03-6280-2569</a><br>
+            FAX: なし<br>
+            携帯: <a href="tel:080-1202-0360">080-1202-0360</a><br>
+            メール: <a href="mailto:y-onda@skk.jp">y-onda@skk.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>荻須英利</strong><br>
+            会社名: 三建設備工業株式会社<br>
+            役職: 主査<br>
+            住所: 〒450-0003名古屋市中村区名駅南2-14-19 住友生命名古屋ビル23階<br>
+            電話: <a href="tel:052-561-4107">052-561-4107</a><br>
+            FAX: 052-586-8400<br>
+            携帯: <a href="tel:090-8478-0670">090-8478-0670</a><br>
+            メール: <a href="mailto:h-ogisu@skk.jp">h-ogisu@skk.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>鷲田 勇二</strong><br>
+            会社名: 株式会社 きんでん<br>
+            役職: 執行役員 中部支社長<br>
+            住所: 〒450-16038 名古屋市中村区名駅1丁目1番4号 JRセントラルタワーズ38階<br>
+            電話: <a href="tel:052-581-1981">052-581-1981</a><br>
+            FAX: 052-581-1954<br>
+            携帯: なし<br>
+            メール: なし
+        </li>
+        <li class="contact-item">
+            <strong>三治 元宏</strong><br>
+            会社名: 株式会社きんでん<br>
+            役職: 中部支社 第三工事部長 (静岡地区統轄責任者) 技術士(電気電子部門)<br>
+            住所: 〒420-0857 静岡市葵区御幸町5-9 静岡フコク生命ビル6階<br>
+            電話: <a href="tel:0542553495">054(255)3495</a><br>
+            FAX: 054(253)6950<br>
+            携帯: <a href="tel:080-6352-3636">080-6352-3636</a><br>
+            メール: <a href="mailto:sanji_motohiro@kinden.co.jp">sanji_motohiro@kinden.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>堀口 昌義</strong><br>
+            会社名: 株式会社きんでん<br>
+            役職: 中部支社 営業部 営業第二課副長(静岡地区担当)<br>
+            住所: 〒420-0857 静岡市葵区御幸町5-9 静岡フコク生命ビル6階<br>
+            電話: <a href="tel:0542553495">054(255)3495</a><br>
+            FAX: 054(253)6950<br>
+            携帯: <a href="tel:090-3836-8585">090-3836-8585</a><br>
+            メール: <a href="mailto:horiguchi_masayoshi@kinden.co.jp">horiguchi_masayoshi@kinden.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>田中 健二郎</strong><br>
+            会社名: 株式会社きんでん<br>
+            役職: 中部支社 第三工事部 沼津営業所長<br>
+            住所: 〒410-0814 沼津市玉江町7番33号<br>
+            電話: <a href="tel:0559310715">055(931)0715</a><br>
+            FAX: 055(932)4096<br>
+            携帯: <a href="tel:080-6356-2741">080-6356-2741</a><br>
+            メール: <a href="mailto:tanaka_kenjirou@kinden.co.jp">tanaka_kenjirou@kinden.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>筒井 貴彦</strong><br>
+            会社名: 株式会社きんでん<br>
+            役職: 中部支社 第三工事部 沼津営業所 課長<br>
+            住所: 〒410-0814 沼津市玉江町7番33号<br>
+            電話: <a href="tel:0559310715">055(931)0715</a><br>
+            FAX: 055(932)4096<br>
+            携帯: <a href="tel:080-6356-2706">080-6356-2706</a><br>
+            メール: <a href="mailto:tsutsui_takahiko@kinden.co.jp">tsutsui_takahiko@kinden.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>柏原 郁也</strong><br>
+            会社名: 株式会社きんでん<br>
+            役職: 中部支社 第三工事部 沼津営業所 工事統轄係 主任<br>
+            住所: 〒410-0814 沼津市玉江町7番33号<br>
+            電話: <a href="tel:0559310715">055(931)0715</a><br>
+            FAX: 055(932)4096<br>
+            携帯: <a href="tel:070-2232-6679">070-2232-6679</a><br>
+            メール: <a href="mailto:kashihara_fumiya@kinden.co.jp">kashihara_fumiya@kinden.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>中根 且統</strong><br>
+            会社名: 三建設備工業株式会社<br>
+            役職: 常務執行役員 名古屋支店長<br>
+            住所: 〒450-0003 名古屋市中村区名駅南二丁目一四番一九号 命名古屋ビル二三階<br>
+            電話: <a href="tel:052-561-4101">052-561-4101</a>(代表)<br>
+            FAX: 052-561-8100<br>
+            携帯: なし<br>
+            メール: <a href="mailto:k-nakane@skk.jp">k-nakane@skk.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>渡辺 勝彦</strong><br>
+            会社名: 東海ガス圧接株式会社<br>
+            役職: 品質管理部 架台事業部<br>
+            住所: 〒410-0022 静岡県沼津市大岡488の1<br>
+            電話: <a href="tel:055-962-4081">055-962-4081</a><br>
+            FAX: 055-962-4083<br>
+            携帯: <a href="tel:070-4372-5396">070-4372-5396</a><br>
+            メール: <a href="mailto:katsuhiko.uts@icloud.com">katsuhiko.uts@icloud.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>纐纈 誠也</strong><br>
+            会社名: 中央総業株式会社<br>
+            役職: 所長 静岡営業所 あと施工アンカー主任技士<br>
+            住所: 〒424-0065 静岡県静岡市清水区長崎1117-2 (静岡中部営業所) / 〒432-8021 静岡県浜松市中区佐鳴台2-16-2 (静岡西部営業所)<br>
+            電話: <a href="tel:0120-07-1222">0120-07-1222</a>(無料)<br>
+            FAX: <a href="tel:0120-07-5585">0120-07-5585</a>(無料)<br>
+            携帯: <a href="tel:080-2205-2210">080-2205-2210</a><br>
+            メール: <a href="mailto:chuo-kohketsu@cs1981.com">chuo-kohketsu@cs1981.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>吉野 祐也</strong><br>
+            会社名: 株式会社 片岡屋<br>
+            役職: 沼津三島営業所 営業課 主任 2級土木施工管理技士<br>
+            住所: 〒411-0822 静岡県三島市松本280-1<br>
+            電話: <a href="tel:055-941-8000">055-941-8000</a><br>
+            FAX: 055-984-3701<br>
+            携帯: <a href="tel:080-1561-4524">080-1561-4524</a><br>
+            メール: <a href="mailto:yoshino-u@kataokaya.co.jp">yoshino-u@kataokaya.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>大塩 真一</strong><br>
+            会社名: 株式会社 真和<br>
+            役職: 代表取締役<br>
+            住所: 〒411-0806 静岡県三島市柳郷地82番地の1<br>
+            電話: <a href="tel:055-976-8400">055-976-8400</a><br>
+            FAX: 055-976-8401<br>
+            携帯: <a href="tel:090-7675-3008">090-7675-3008</a><br>
+            メール: <a href="mailto:shinwa.company@gmail.com">shinwa.company@gmail.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>増田直博</strong><br>
+            会社名: ミノシマ株式会社<br>
+            役職: 所長<br>
+            住所: 〒422-8055静岡県静岡市駿河区寿町9-6<br>
+            電話: <a href="tel:054-291-6401">054-291-6401</a><br>
+            FAX: 054-291-6400<br>
+            携帯: <a href="tel:080-8833-4436">080-8833-4436</a><br>
+            メール: <a href="mailto:masuda-t@myisland.co.jp">masuda-t@myisland.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>吉田哲也</strong><br>
+            会社名: ミノシマ株式会社<br>
+            役職: チーフリーダー<br>
+            住所: 〒151-0073東京都渋谷区笹塚1-57-7 笹塚第一ビル4F<br>
+            電話: <a href="tel:03-5365-4401">03-5365-4401</a><br>
+            FAX: 03-3375-5836<br>
+            携帯: <a href="tel:090-5494-3603">090-5494-3603</a><br>
+            メール: <a href="mailto:yoshida-t@myisland.co.jp">yoshida-t@myisland.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>片岡 雄一</strong><br>
+            会社名: 株式会社 片岡建設<br>
+            役職: 代表取締役 一級建築士 一級建築施工管理技士<br>
+            住所: 〒419-0124 静岡県田方郡函南町塚本227-13<br>
+            電話: <a href="tel:055-979-0318">055-979-0318</a><br>
+            FAX: 055-979-3678<br>
+            携帯: なし<br>
+            メール: <a href="mailto:info@kataokakensetu.jp">info@kataokakensetu.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>山路 保</strong><br>
+            会社名: 株式会社 片岡建設<br>
+            役職: 工事主任<br>
+            住所: 〒419-0124 静岡県田方郡函南町塚本227-13<br>
+            電話: <a href="tel:055-979-0318">055-979-0318</a><br>
+            FAX: 055-979-3678<br>
+            携帯: <a href="tel:090-4195-8416">090-4195-8416</a><br>
+            メール: なし
+        </li>
+        <li class="contact-item">
+            <strong>塩月 雄二</strong><br>
+            会社名: 株式会社 片岡建設<br>
+            役職: 工事長<br>
+            住所: 〒419-0124 静岡県田方郡函南町塚本227-13<br>
+            電話: <a href="tel:055-979-0318">055-979-0318</a><br>
+            FAX: 055-979-3678<br>
+            携帯: <a href="tel:090-8469-0684">090-8469-0684</a><br>
+            メール: なし
+        </li>
+        <li class="contact-item">
+            <strong>西倉 章裕</strong><br>
+            会社名: 株式会社 片岡建設<br>
+            役職: 工事部長 一級型枠施工技能士 一級建築施工管理技士<br>
+            住所: 〒419-0124 静岡県田方郡函南町塚本227-13<br>
+            電話: <a href="tel:055-979-0318">055-979-0318</a><br>
+            FAX: 055-979-3678<br>
+            携帯: <a href="tel:090-5000-7604">090-5000-7604</a><br>
+            メール: <a href="mailto:info@kataokakensetu.jp">info@kataokakensetu.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>伊丸岡 孝</strong><br>
+            会社名: 株式会社三幸建工<br>
+            役職: 代表取締役<br>
+            住所: 〒411-0801 静岡県三島市谷田1081番地3号<br>
+            電話: <a href="tel:055-913-2029">055-913-2029</a><br>
+            FAX: 055-913-2029<br>
+            携帯: <a href="tel:090-3388-3330">090-3388-3330</a><br>
+            メール: <a href="mailto:sankou35imaru@outlook.jp">sankou35imaru@outlook.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>佐野 寛和</strong><br>
+            会社名: 佐野和建工株式会社<br>
+            役職: 代表取締役<br>
+            住所: 〒417-0801 静岡県富士市大淵470-1 (資材置場加工場)富士市大淵548-1<br>
+            電話: <a href="tel:0545-35-5672">0545-35-5672</a><br>
+            FAX: 0545-50-1210<br>
+            携帯: <a href="tel:090-9663-2163">090-9663-2163</a><br>
+            メール: <a href="mailto:sanowakenkou@ny.thn.ne.jp">sanowakenkou@ny.thn.ne.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>鈴木 潤</strong><br>
+            会社名: 有限会社 東和<br>
+            役職: 代表取締役 登録コンクリート圧送基幹技能者 1級コンクリート圧送施工技能士<br>
+            住所: 〒417-0807 静岡県富士市神戸53番地の1<br>
+            電話: <a href="tel:0545-21-6880">0545-21-6880</a><br>
+            FAX: 0545-21-6885<br>
+            携帯: <a href="tel:090-1096-3534">090-1096-3534</a><br>
+            メール: <a href="mailto:noriyo.suzuki@nifty.com">noriyo.suzuki@nifty.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>川合恵介</strong><br>
+            会社名: 日鋪建設株式会社<br>
+            役職: 工事統括所長<br>
+            住所: 〒422-8004静岡県静岡市駿河区国吉田2-1-3<br>
+            電話: <a href="tel:054-263-4954">054-263-4954</a><br>
+            FAX: 054-263-4956<br>
+            携帯: <a href="tel:080-4104-7580">080-4104-7580</a><br>
+            メール: <a href="mailto:kawai@nippokensetsu.co.jp">kawai@nippokensetsu.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>石渡浩</strong><br>
+            会社名: 箱根植木株式会社<br>
+            役職: 専務取締役<br>
+            住所: 〒168-0074東京都杉並区上高井戸3-5-15<br>
+            電話: <a href="tel:03-3303-2215">03-3303-2215</a><br>
+            FAX: 03-3303-3187<br>
+            携帯: なし<br>
+            メール: <a href="mailto:ishiwata@hakone-ueki.com">ishiwata@hakone-ueki.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>沖洋光</strong><br>
+            会社名: 箱根植木株式会社<br>
+            役職: マネージャー<br>
+            住所: 〒168-0074東京都杉並区上高井戸3-5-15<br>
+            電話: <a href="tel:03-3303-2211">03-3303-2211</a><br>
+            FAX: 03-3303-2273<br>
+            携帯: <a href="tel:080-8720-1204">080-8720-1204</a><br>
+            メール: <a href="mailto:oki@hakone-ueki.com">oki@hakone-ueki.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>笠井真志</strong><br>
+            会社名: 箱根植木株式会社<br>
+            役職: なし<br>
+            住所: 〒168-0074東京都杉並区上高井戸3-5-15<br>
+            電話: <a href="tel:03-3303-2211">03-3303-2211</a><br>
+            FAX: 03-3303-2273<br>
+            携帯: <a href="tel:070-4078-6675">070-4078-6675</a><br>
+            メール: <a href="mailto:kasai@hakone-ueki.com">kasai@hakone-ueki.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>寺園達彦</strong><br>
+            会社名: 阪和興業株式会社<br>
+            役職: なし<br>
+            住所: 〒450-6335名古屋市中村区名駅一丁目1番1号 JPタワー<br>
+            電話: <a href="tel:052-977-3412">052-977-3412</a><br>
+            FAX: 052-977-3610<br>
+            携帯: <a href="tel:080-2600-9290">080-2600-9290</a><br>
+            メール: <a href="mailto:terazono-tatsuhiko@hanwa.co.jp">terazono-tatsuhiko@hanwa.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>加藤 礼子</strong><br>
+            会社名: 株式会社 加藤鉄筋工業<br>
+            役職: 取締役社長<br>
+            住所: 〒411-0932 静岡県駿東郡長泉町南一色550-7<br>
+            電話: <a href="tel:055-955-5060">055-955-5060</a>(代)<br>
+            FAX: 055-957-1580<br>
+            携帯: <a href="tel:070-5031-2342">070-5031-2342</a><br>
+            メール: <a href="mailto:katokin@bronze.ocn.ne.jp">katokin@bronze.ocn.ne.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>鈴木 和浩</strong><br>
+            会社名: 株式会社 加藤鉄筋工業<br>
+            役職: 職長 一級鉄筋施工技能士(第04-1-047-22-0005号) 登録鉄筋基幹技能者(121422-00616)<br>
+            住所: 〒411-0932 静岡県駿東郡長泉町南一色550-7<br>
+            電話: <a href="tel:055-955-5060">055-955-5060</a>(代)<br>
+            FAX: 055-957-1580<br>
+            携帯: <a href="tel:070-5031-8342">070-5031-8342</a><br>
+            メール: <a href="mailto:katokin@bronze.ocn.ne.jp">katokin@bronze.ocn.ne.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>真野 彰子</strong><br>
+            会社名: 株式会社加藤鉄筋工業<br>
+            役職: 積算・現場管理<br>
+            住所: 〒411-0932 静岡県駿東郡長泉町南一色550-7<br>
+            電話: <a href="tel:055-955-5060">055-955-5060</a><br>
+            FAX: 055-957-1580<br>
+            携帯: なし<br>
+            メール: <a href="mailto:katokin@bronze.ocn.ne.jp">katokin@bronze.ocn.ne.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>柳澤武彦</strong><br>
+            会社名: 株式会社柳沢建設<br>
+            役職: 代表取締役<br>
+            住所: 〒422-8076静岡市駿河区八幡三丁目十二番一〇号<br>
+            電話: <a href="tel:054-282-0014">054-282-0014</a><br>
+            FAX: 054-284-1591<br>
+            携帯: <a href="tel:090-3252-0579">090-3252-0579</a><br>
+            メール: <a href="mailto:takehiko@yanagisawa-kensetu.co.jp">takehiko@yanagisawa-kensetu.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>嘉藤 真弘</strong><br>
+            会社名: 有限会社 カトキン<br>
+            役職: 代表取締役<br>
+            住所: 〒252-0311 神奈川県相模原市南区東林間4-23-3<br>
+            電話: <a href="tel:042-814-1158">042-814-1158</a><br>
+            FAX: 042-814-2706<br>
+            携帯: <a href="tel:090-6101-9648">090-6101-9648</a><br>
+            メール: <a href="mailto:katokin777@gmail.com">katokin777@gmail.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>高杉 政行</strong><br>
+            会社名: 近藤鋼材株式会社<br>
+            役職: 技術管理課 係長<br>
+            住所: 〒410-0058 沼津市沼北町2丁目2番16号<br>
+            電話: <a href="tel:055-925-1955">055-925-1955</a><br>
+            FAX: 055-925-1970<br>
+            携帯: <a href="tel:090-1789-0528">090-1789-0528</a><br>
+            メール: <a href="mailto:takasugi@kondo-kouzai.co.jp">takasugi@kondo-kouzai.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>SU MYAT NOE OO</strong><br>
+            会社名: 近藤鋼材株式会社<br>
+            役職: 技術管理課<br>
+            住所: 〒410-0058 沼津市沼北町2丁目2番16号<br>
+            電話: <a href="tel:055-925-1955">055-925-1955</a><br>
+            FAX: 055-925-1970<br>
+            携帯: なし<br>
+            メール: <a href="mailto:sumya@kondo-kouzai.co.jp">sumya@kondo-kouzai.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>山本 明永</strong><br>
+            会社名: 近藤鋼材株式会社<br>
+            役職: 鉄鋼第三部 次長<br>
+            住所: 〒410-0058 沼津市沼北町2丁目2番16号<br>
+            電話: <a href="tel:055-925-1910">055-925-1910</a><br>
+            FAX: 055-925-1970<br>
+            携帯: <a href="tel:090-7950-5511">090-7950-5511</a><br>
+            メール: <a href="mailto:a.yamamoto@kondo-kouzai.co.jp">a.yamamoto@kondo-kouzai.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>張 宏建</strong><br>
+            会社名: 株式会社 アイコー<br>
+            役職: 施工企画部 課長 一級鉄筋技能士<br>
+            住所: 〒103-0001 東京都中央区日本橋小伝馬町15番18号 EDGE小伝馬町ビル6階<br>
+            電話: <a href="tel:03-6661-1503">03-6661-1503</a><br>
+            FAX: なし<br>
+            携帯: <a href="tel:080-4408-7428">080-4408-7428</a><br>
+            メール: <a href="mailto:k_chou@aikoh-corp.jp">k_chou@aikoh-corp.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>岩永 幸治</strong><br>
+            会社名: 株式会社 アイコー<br>
+            役職: 施工企画部 部長 一級鉄筋技能士 鉄筋基幹技能者<br>
+            住所: 〒103-0001 東京都中央区日本橋小伝馬町15番18号 EDGE小伝馬町ビル6階<br>
+            電話: <a href="tel:03-6661-1503">03-6661-1503</a><br>
+            FAX: なし<br>
+            携帯: <a href="tel:080-4439-1254">080-4439-1254</a><br>
+            メール: <a href="mailto:iwanaga@aikoh-corp.jp">iwanaga@aikoh-corp.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>増田 俊</strong><br>
+            会社名: 株式会社 渡邊鐵工所<br>
+            役職: 工務グループ<br>
+            住所: 〒426-0053 静岡県藤枝市善左衛門1471-12<br>
+            電話: <a href="tel:054-634-3211">054-634-3211</a><br>
+            FAX: 054-636-7551<br>
+            携帯: <a href="tel:090-8734-9601">090-8734-9601</a><br>
+            メール: <a href="mailto:s-masuda@nabetetsu.com">s-masuda@nabetetsu.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>後藤 克浩</strong><br>
+            会社名: 株式会社 寺崎組<br>
+            役職: 専務取締役<br>
+            住所: 〒411-0904 静岡県駿東郡清水町柿田724 (本社) / 〒231-0023 神奈川県横浜市中区山下町255-1 リリファ横濱山下町203 (横浜営業所)<br>
+            電話: <a href="tel:055-976-0430">055-976-0430</a> (本社) / <a href="tel:045-225-8922">045-225-8922</a> (横浜営業所)<br>
+            FAX: 055-976-5383 (本社) / 045-225-8923 (横浜営業所)<br>
+            携帯: <a href="tel:090-2771-9831">090-2771-9831</a><br>
+            メール: <a href="mailto:terasaki-goto@tobi27.jp">terasaki-goto@tobi27.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>鈴木 勇士</strong><br>
+            会社名: 鈴与商事株式会社<br>
+            役職: 建材営業部 静岡営業課長 (静岡県東部地区担当)<br>
+            住所: 〒420-0859 静岡市葵区栄町1-3 鈴与静岡ビル6F<br>
+            電話: <a href="tel:054-263-2493">054-263-2493</a><br>
+            FAX: 054-263-2495<br>
+            携帯: <a href="tel:090-7302-7850">090-7302-7850</a><br>
+            メール: <a href="mailto:t-suzuki_04@ss.suzuyoshoji.co.jp">t-suzuki_04@ss.suzuyoshoji.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>小林 宏暢</strong><br>
+            会社名: SGM株式会社<br>
+            役職: 営業<br>
+            住所: 〒420-0837 静岡県静岡市葵区日出町10-15 SOZOSYA 日出町ビル3C (静岡支店)<br>
+            電話: <a href="tel:054-295-5700">054-295-5700</a><br>
+            FAX: 054-295-5701<br>
+            携帯: <a href="tel:080-9737-0357">080-9737-0357</a><br>
+            メール: <a href="mailto:kobayashi@sgm-group.jp">kobayashi@sgm-group.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>小栗博幸</strong><br>
+            会社名: 株式会社NIPPO<br>
+            役職: 営業担当課長<br>
+            住所: 〒422-8004静岡市駿河区国吉田2-1-3<br>
+            電話: <a href="tel:054-261-6278">054-261-6278</a><br>
+            FAX: 054-261-6280<br>
+            携帯: <a href="tel:090-5300-5341">090-5300-5341</a><br>
+            メール: <a href="mailto:oguri_hiroyuki@nippo-c.jp">oguri_hiroyuki@nippo-c.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>刈部範男</strong><br>
+            会社名: 丸藤シートパイル株式会社<br>
+            役職: 所長<br>
+            住所: 〒420-0837静岡市葵区日出町1番2号 TOKAI日出町ビル<br>
+            電話: <a href="tel:054-254-8936">054-254-8936</a><br>
+            FAX: 054-254-2617<br>
+            携帯: <a href="tel:080-2594-0141">080-2594-0141</a><br>
+            メール: <a href="mailto:karube@mrfj.co.jp">karube@mrfj.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>朝岡富士夫</strong><br>
+            会社名: 丸藤シートパイル株式会社<br>
+            役職: 専門部長<br>
+            住所: 〒450-0002名古屋市中村区名駅3丁目8番7号 ダイアビル名駅<br>
+            電話: <a href="tel:052-582-9024">052-582-9024</a><br>
+            FAX: 052-583-8057<br>
+            携帯: なし<br>
+            メール: <a href="mailto:asaoka@mrfj.co.jp">asaoka@mrfj.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>上林雅博</strong><br>
+            会社名: 丸藤シートパイル株式会社<br>
+            役職: グループ長<br>
+            住所: 〒450-0002名古屋市中村区名駅3丁目8番7号 ダイアビル名駅<br>
+            電話: <a href="tel:052-582-9021">052-582-9021</a><br>
+            FAX: 052-583-8057<br>
+            携帯: <a href="tel:090-1534-7838">090-1534-7838</a><br>
+            メール: <a href="mailto:kamibayashi@mrfj.co.jp">kamibayashi@mrfj.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>筒井 明</strong><br>
+            会社名: ケーオーディー株式会社<br>
+            役職: 静岡営業所 所長<br>
+            住所: 〒422-8077 静岡県静岡市駿河区大和1-2-26 リエス大和 1-B<br>
+            電話: <a href="tel:054-280-0202">054-280-0202</a><br>
+            FAX: 054-284-8223<br>
+            携帯: <a href="tel:090-6765-0918">090-6765-0918</a><br>
+            メール: <a href="mailto:kod_tsutsui@yahoo.co.jp">kod_tsutsui@yahoo.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>菊池正人</strong><br>
+            会社名: ヒダ株式会社<br>
+            役職: 部長<br>
+            住所: 〒420-0821静岡市葵区柚木570番地<br>
+            電話: <a href="tel:054-265-2228">054-265-2228</a><br>
+            FAX: 054-265-1545<br>
+            携帯: <a href="tel:090-9941-0523">090-9941-0523</a><br>
+            メール: <a href="mailto:kikuchi@hida-group.co.jp">kikuchi@hida-group.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>長谷川 大</strong><br>
+            会社名: 関ヶ原石材株式会社<br>
+            役職: 名古屋支店 営業課 課長<br>
+            住所: 〒464-0073 名古屋市千種区高見2丁目13番4号<br>
+            電話: <a href="tel:052-761-5286">052-761-5286</a><br>
+            FAX: 052-762-7063<br>
+            携帯: <a href="tel:080-6988-4744">080-6988-4744</a><br>
+            メール: <a href="mailto:dai.h@sekigahara-s.co.jp">dai.h@sekigahara-s.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>前田 高輝</strong><br>
+            会社名: 関ヶ原石材株式会社<br>
+            役職: 名古屋支店 支店長 全国建築石材工業会認定 建築石材アドバイザー<br>
+            住所: 〒464-0073 名古屋市千種区高見2丁目13番4号<br>
+            電話: <a href="tel:052-761-5286">052-761-5286</a><br>
+            FAX: 052-762-7063<br>
+            携帯: <a href="tel:080-6988-4766">080-6988-4766</a><br>
+            メール: <a href="mailto:k.maeda@sekigahara-s.co.jp">k.maeda@sekigahara-s.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>鈴木 祐大</strong><br>
+            会社名: ナブコシステム株式会社<br>
+            役職: 静岡支店 営業課 チーフ (二級自動ドア施工技能士)<br>
+            住所: 〒420-0935 静岡県静岡市葵区池ヶ谷東4-8<br>
+            電話: <a href="tel:054-246-1576">054-246-1576</a><br>
+            FAX: 054-247-1991<br>
+            携帯: <a href="tel:080-2640-0032">080-2640-0032</a><br>
+            メール: <a href="mailto:yuta.suzuki@nabcosystem.co.jp">yuta.suzuki@nabcosystem.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>浅川 友哉</strong><br>
+            会社名: ナブコシステム株式会社<br>
+            役職: 沼津営業所 営業担当<br>
+            住所: 〒410-0065 静岡県沼津市花園町9-7<br>
+            電話: <a href="tel:055-922-1469">055-922-1469</a><br>
+            FAX: 055-923-7594<br>
+            携帯: <a href="tel:070-3996-4610">070-3996-4610</a><br>
+            メール: <a href="mailto:tomoya.asakawa@nabcosystem.co.jp">tomoya.asakawa@nabcosystem.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>石上明彦</strong><br>
+            会社名: 株式会社静岡床工事<br>
+            役職: 取締役 統括部長<br>
+            住所: 〒421-0114静岡市駿河区桃園町13番30号<br>
+            電話: <a href="tel:054-259-1952">054-259-1952</a><br>
+            FAX: 054-259-1974<br>
+            携帯: <a href="tel:090-1478-8725">090-1478-8725</a><br>
+            メール: <a href="mailto:a-ishigami@shizuyuka.co.jp">a-ishigami@shizuyuka.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>大滝和之</strong><br>
+            会社名: まねきや硝子株式会社<br>
+            役職: 支店長<br>
+            住所: 〒416-0934静岡県富士市鮫島141-3<br>
+            電話: <a href="tel:0545-63-8511">0545-63-8511</a><br>
+            FAX: 0545-63-8513<br>
+            携帯: <a href="tel:080-9821-6757">080-9821-6757</a><br>
+            メール: <a href="mailto:kazuyuki.ootaki@manekiya.jp">kazuyuki.ootaki@manekiya.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>鈴木 章弘</strong><br>
+            会社名: 有限会社 アキマ建設工業<br>
+            役職: 代表取締役<br>
+            住所: 〒421-0305 静岡県榛原郡吉田町大幡240-2<br>
+            電話: <a href="tel:0548-32-9771">0548-32-9771</a><br>
+            FAX: 0548-33-9098<br>
+            携帯: <a href="tel:090-5624-8830">090-5624-8830</a><br>
+            メール: <a href="mailto:info@akima-k.com">info@akima-k.com</a> (Office), <a href="mailto:as@akima-k.com">as@akima-k.com</a> (Private)
+        </li>
+        <li class="contact-item">
+            <strong>永田 幸弘</strong><br>
+            会社名: 三和シヤッター工業株式会社<br>
+            役職: 中部事業部 静岡ブロック 静岡営業二課 課長 二級建築施工管理技士<br>
+            住所: 〒420-0803 静岡県静岡市葵区千代田7-8-1<br>
+            電話: <a href="tel:054-262-2224">054-262-2224</a><br>
+            FAX: 054-262-2716<br>
+            携帯: <a href="tel:080-8261-1460">080-8261-1460</a><br>
+            メール: <a href="mailto:NAGATAYU@sip.sanwa-ss.co.jp">NAGATAYU@sip.sanwa-ss.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>井上 元太</strong><br>
+            会社名: 三和シヤッター工業株式会社<br>
+            役職: 中部事業部 静岡ブロック 静岡営業二課 課長 消防設備士甲種4種 2級建築施工管理技士(仕上げ)<br>
+            住所: 〒420-0803 静岡県静岡市葵区千代田7-8-1<br>
+            電話: <a href="tel:054-262-2224">054-262-2224</a><br>
+            FAX: 054-262-2716<br>
+            携帯: <a href="tel:090-8940-1394">090-8940-1394</a><br>
+            メール: <a href="mailto:INOUEG@sip.sanwa-ss.co.jp">INOUEG@sip.sanwa-ss.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>平田実</strong><br>
+            会社名: フジテック株式会社<br>
+            役職: 課長代理<br>
+            住所: 〒420-0857静岡市葵区御幸町4-1<br>
+            電話: <a href="tel:054-255-3701">054-255-3701</a><br>
+            FAX: 054-255-3702<br>
+            携帯: <a href="tel:090-4445-3135">090-4445-3135</a><br>
+            メール: <a href="mailto:minoru.hirata@jp.fujitec.com">minoru.hirata@jp.fujitec.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>渡邉拓也</strong><br>
+            会社名: フジテック株式会社<br>
+            役職: なし<br>
+            住所: 〒420-0857静岡市葵区御幸町4-1<br>
+            電話: <a href="tel:054-255-3701">054-255-3701</a><br>
+            FAX: 054-255-3702<br>
+            携帯: <a href="tel:090-5133-3935">090-5133-3935</a><br>
+            メール: <a href="mailto:takuya.watanabe@jp.fujitec.com">takuya.watanabe@jp.fujitec.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>宮野将綱</strong><br>
+            会社名: フジテック株式会社<br>
+            役職: なし<br>
+            住所: 〒420-0857静岡市葵区御幸町4-1<br>
+            電話: <a href="tel:054-255-3701">054-255-3701</a><br>
+            FAX: 054-255-3702<br>
+            携帯: <a href="tel:070-2279-9228">070-2279-9228</a><br>
+            メール: <a href="mailto:hirotsuna.miyano@jp.fujitec.com">hirotsuna.miyano@jp.fujitec.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>川村 淳一</strong><br>
+            会社名: 有限会社 川村室内工芸<br>
+            役職: 代表取締役<br>
+            住所: 静岡県知事許可 第24589号 (住所詳細不明)<br>
+            電話: なし<br>
+            FAX: なし<br>
+            携帯: <a href="tel:090-7319-9966">090-7319-9966</a><br>
+            メール: <a href="mailto:jun.k@kawamura-kougei.co.jp">jun.k@kawamura-kougei.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>畑中 偉志</strong><br>
+            会社名: 有限会社 川村室内工芸<br>
+            役職: 専務取締役<br>
+            住所: 静岡県知事許可 第24589号 (住所詳細不明)<br>
+            電話: なし<br>
+            FAX: なし<br>
+            携帯: <a href="tel:090-3552-5859">090-3552-5859</a><br>
+            メール: <a href="mailto:h.hatanaka@kawamura-kougei.co.jp">h.hatanaka@kawamura-kougei.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>林田 慎太郎</strong><br>
+            会社名: 久保田建装株式会社<br>
+            役職: 支店長 2級土木施工管理技士 2級建築施工管理技士<br>
+            住所: 〒422-8044 静岡市駿河区西脇342-1<br>
+            電話: <a href="tel:054-202-2755">054-202-2755</a>(直)<br>
+            FAX: 054-202-2723<br>
+            携帯: <a href="tel:090-5618-5925">090-5618-5925</a><br>
+            メール: <a href="mailto:hayashida@kubotakenso.com">hayashida@kubotakenso.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>片井 新矢</strong><br>
+            会社名: 久保田建装株式会社<br>
+            役職: 支店次長<br>
+            住所: 〒422-8044 沼津市岡宮1330-4<br>
+            電話: <a href="tel:055-924-5254">055-924-5254</a>(代)<br>
+            FAX: 055-924-5074<br>
+            携帯: <a href="tel:080-6985-9979">080-6985-9979</a><br>
+            メール: <a href="mailto:kuboken-numazu@ny.tokai.or.jp">kuboken-numazu@ny.tokai.or.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>池谷 将紀</strong><br>
+            会社名: 株式会社 稲葉商店<br>
+            役職: 工事部 部長 一級建築施工管理技士<br>
+            住所: 〒420-0813 静岡市葵区長沼971-1<br>
+            電話: <a href="tel:054-263-1251">054-263-1251</a><br>
+            FAX: 054-261-6255<br>
+            携帯: <a href="tel:090-3254-6113">090-3254-6113</a><br>
+            メール: <a href="mailto:ikegaya-kojibu@inabashoten.co.jp">ikegaya-kojibu@inabashoten.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>松田健司</strong><br>
+            会社名: 駿河工業株式会社<br>
+            役職: 宅地建物取引士(静岡第015429号) 1級土木施工管理技士 課長<br>
+            住所: 〒422-8044静岡市駿河区西脇661-1<br>
+            電話: <a href="tel:054-282-0202">054-282-0202</a><br>
+            FAX: 054-282-0684<br>
+            携帯: <a href="tel:090-4400-0554">090-4400-0554</a><br>
+            メール: <a href="mailto:matsu@surugakogyo.jp">matsu@surugakogyo.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>鈴木祐大</strong><br>
+            会社名: ナブコシステム株式会社<br>
+            役職: チーフ<br>
+            住所: 〒420-0935静岡県静岡市葵区池ヶ谷東4-8<br>
+            電話: <a href="tel:054-246-1576">054-246-1576</a><br>
+            FAX: 054-247-1991<br>
+            携帯: <a href="tel:080-2640-0032">080-2640-0032</a><br>
+            メール: <a href="mailto:yuta.suzuki@nabcosystem.co.jp">yuta.suzuki@nabcosystem.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>浅川友哉</strong><br>
+            会社名: ナブコシステム株式会社<br>
+            役職: 営業担当<br>
+            住所: 〒410-0065静岡県沼津市花園町9-7<br>
+            電話: <a href="tel:055-922-1469">055-922-1469</a><br>
+            FAX: 055-923-7594<br>
+            携帯: <a href="tel:070-3996-4610">070-3996-4610</a><br>
+            メール: <a href="mailto:tomoya.asakawa@nabcosystem.co.jp">tomoya.asakawa@nabcosystem.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>遠藤 大輔</strong><br>
+            会社名: 株式会社 スエヒロ工業<br>
+            役職: 工事部 統括部長 一級建築施工管理技士 / シーリング管理士 / 建築仕上診断技術者<br>
+            住所: 静岡県知事許可 第26112号 (本社:静岡県沼津市) 東京支店(港区南青山) 札幌営業所 (住所詳細不明)<br>
+            電話: なし<br>
+            FAX: なし<br>
+            携帯: <a href="tel:090-5110-2860">090-5110-2860</a><br>
+            メール: <a href="mailto:daisuke@suehiro-kogyou.co.jp">daisuke@suehiro-kogyou.co.jp</a>, <a href="mailto:suehirok@aioros.ocn.ne.jp">suehirok@aioros.ocn.ne.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>望月 高雄</strong><br>
+            会社名: 阿部興業株式会社<br>
+            役職: 静岡支店 支店長<br>
+            住所: 〒422-8034 静岡県静岡市駿河区高松1-23-7<br>
+            電話: <a href="tel:054-238-1005">054-238-1005</a><br>
+            FAX: 054-236-0062<br>
+            携帯: <a href="tel:090-5815-8729">090-5815-8729</a><br>
+            メール: <a href="mailto:takao.mochizuki@abekogyo.co.jp">takao.mochizuki@abekogyo.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>鈴木 康広</strong><br>
+            会社名: 株式会社すずや<br>
+            役職: 取締役<br>
+            住所: 〒410-0317 静岡県沼津市石川168-3<br>
+            電話: <a href="tel:055-967-0674">055-967-0674</a><br>
+            FAX: 055-967-0044<br>
+            携帯: <a href="tel:090-9813-7037">090-9813-7037</a><br>
+            メール: <a href="mailto:suzuya9670674@yahoo.co.jp">suzuya9670674@yahoo.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>阿部 俊</strong><br>
+            会社名: 静岡ロジスティクス株式会社<br>
+            役職: 建設事業本部 重機部 部長<br>
+            住所: 〒411-0932 静岡県駿東郡長泉町南一色881-1<br>
+            電話: <a href="tel:055-980-6644">055-980-6644</a><br>
+            FAX: 055-988-9901<br>
+            携帯: <a href="tel:090-5106-2092">090-5106-2092</a><br>
+            メール: <a href="mailto:s-abe@shizuokalogi.jp">s-abe@shizuokalogi.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>小野 琴則</strong><br>
+            会社名: 大沢重機 株式会社<br>
+            役職: 部長<br>
+            住所: 〒412-0006 静岡県御殿場市中畑1726-6<br>
+            電話: <a href="tel:0550-89-1051">0550-89-1051</a><br>
+            FAX: 0550-89-1770<br>
+            携帯: <a href="tel:090-1414-0297">090-1414-0297</a><br>
+            メール: <a href="mailto:crane@oosawajuki.co.jp">crane@oosawajuki.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>大村陽祐</strong><br>
+            会社名: フジリース株式会社<br>
+            役職: 副部長<br>
+            住所: 〒424-0067静岡市清水区鳥坂296番地の1<br>
+            電話: <a href="tel:054-345-1757">054-345-1757</a><br>
+            FAX: 054-347-0512<br>
+            携帯: <a href="tel:080-2605-5189">080-2605-5189</a><br>
+            メール: <a href="mailto:oomura_yousuke@daikei-gr.co.jp">oomura_yousuke@daikei-gr.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>小澤 昭子</strong><br>
+            会社名: 新栄道路標識株式会社<br>
+            役職: 営業統括部長 / 沼津営業所<br>
+            住所: 〒410-0062 静岡県沼津市宮前町18-2<br>
+            電話: <a href="tel:055-924-3507">055-924-3507</a><br>
+            FAX: 055-924-3601<br>
+            携帯: <a href="tel:090-7672-4100">090-7672-4100</a><br>
+            メール: <a href="mailto:ozawa@shin-eidoro.jp">ozawa@shin-eidoro.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>青波一郎</strong><br>
+            会社名: 株式会社レンタルのニッケン<br>
+            役職: 東海支店長<br>
+            住所: 〒460-0002愛知県名古屋市中区丸の内2-18-25丸の内KSビル9F<br>
+            電話: <a href="tel:052-211-7665">052-211-7665</a><br>
+            FAX: なし<br>
+            携帯: なし<br>
+            メール: <a href="mailto:aonami@rental.co.jp">aonami@rental.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>織田要司</strong><br>
+            会社名: 株式会社レンタルのニッケン<br>
+            役職: 建築チームリーダー<br>
+            住所: 〒460-0002愛知県名古屋市中区丸の内2-18-25丸の内KSビル9F<br>
+            電話: <a href="tel:052-211-7665">052-211-7665</a><br>
+            FAX: 052-211-7666<br>
+            携帯: なし<br>
+            メール: <a href="mailto:oda5@rental.co.jp">oda5@rental.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>伊倉 春久</strong><br>
+            会社名: 太陽建機レンタル株式会社<br>
+            役職: 小山支店 営業チーフ<br>
+            住所: 〒410-1326 駿東郡小山町用沢川麦田114-1<br>
+            電話: <a href="tel:0550781300">0550(78)1300</a><br>
+            FAX: 0550(86)2023<br>
+            携帯: <a href="tel:080-1573-3080">080-1573-3080</a><br>
+            メール: <a href="mailto:oyam@taiyokenki.com">oyam@taiyokenki.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>勝呂誠也</strong><br>
+            会社名: 太陽建機レンタル株式会社<br>
+            役職: なし<br>
+            住所: 〒410-0003沼津市新沢田町235<br>
+            電話: <a href="tel:055-923-2022">055-923-2022</a><br>
+            FAX: 055-927-0389<br>
+            携帯: <a href="tel:080-8676-5874">080-8676-5874</a><br>
+            メール: <a href="mailto:seiya.suguro@taiyokenki.com">seiya.suguro@taiyokenki.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>中村直史</strong><br>
+            会社名: 太陽建機レンタル株式会社<br>
+            役職: 支店長<br>
+            住所: 〒410-1326駿東郡小山町用沢川麦田114-1<br>
+            電話: <a href="tel:0550-78-1300">0550-78-1300</a><br>
+            FAX: 0550-86-2023<br>
+            携帯: <a href="tel:080-1573-3052">080-1573-3052</a><br>
+            メール: <a href="mailto:naofumi.nakamura@taiyokenki.com">naofumi.nakamura@taiyokenki.com</a>
+        </li>
+        <li class="contact-item">
+            <strong>當山隆馬</strong><br>
+            会社名: 丸井産業株式会社<br>
+            役職: なし<br>
+            住所: なし<br>
+            電話: <a href="tel:050-3145-0101">050-3145-0101</a><br>
+            FAX: 050-3173-0101<br>
+            携帯: <a href="tel:080-2679-0101">080-2679-0101</a><br>
+            メール: <a href="mailto:numazu@marui0101.co.jp">numazu@marui0101.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>本田 貴志</strong><br>
+            会社名: 杉田エース株式会社<br>
+            役職: 富士営業所<br>
+            住所: 〒416-0946 静岡県富士市五貫島818<br>
+            電話: <a href="tel:0545-67-0551">0545-67-0551</a><br>
+            FAX: 0545-67-0552<br>
+            携帯: <a href="tel:080-2219-6324">080-2219-6324</a><br>
+            メール: <a href="mailto:takashi.honda@sugita-ace.co.jp">takashi.honda@sugita-ace.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>望月 一弥</strong><br>
+            会社名: 有限会社 峡南環境サービス<br>
+            役職: 顧問<br>
+            住所: 〒400-0414 山梨県南アルプス市戸田916-18<br>
+            電話: <a href="tel:055-284-4543">055-284-4543</a><br>
+            FAX: 055-225-4545<br>
+            携帯: <a href="tel:070-4304-8996">070-4304-8996</a><br>
+            メール: <a href="mailto:kazuya-mochizuki@kyonan-k.biz-web.jp">kazuya-mochizuki@kyonan-k.biz-web.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>長與 治</strong><br>
+            会社名: アムズ株式会社<br>
+            役職: 静岡営業所 専任課長<br>
+            住所: 〒420-0934 静岡市葵区岳美10番地16号<br>
+            電話: <a href="tel:054-246-2638">054-246-2638</a><br>
+            FAX: 054-246-9548<br>
+            携帯: <a href="tel:080-6362-2919">080-6362-2919</a><br>
+            メール: <a href="mailto:chosuke@e-ams.co.jp">chosuke@e-ams.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>東 健士</strong><br>
+            会社名: アムズ株式会社<br>
+            役職: 執行役員 静岡営業所 所長<br>
+            住所: 〒420-0934 静岡市葵区岳美10番地16号<br>
+            電話: <a href="tel:054-246-2638">054-246-2638</a><br>
+            FAX: 054-246-9548<br>
+            携帯: <a href="tel:080-6362-2921">080-6362-2921</a><br>
+            メール: <a href="mailto:takeshi-higashi@e-ams.co.jp">takeshi-higashi@e-ams.co.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>須田 政幸</strong><br>
+            会社名: 株式会社アイト<br>
+            役職: 代表取締役<br>
+            住所: 〒253-0065 茅ヶ崎市松尾8-51<br>
+            電話: <a href="tel:0467-83-8189">0467-83-8189</a><br>
+            FAX: 0467-83-8189<br>
+            携帯: <a href="tel:090-3098-1639">090-3098-1639</a><br>
+            メール: <a href="mailto:suda@aito-inc.jp">suda@aito-inc.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>小林 秀樹</strong><br>
+            会社名: 株式会社アイト<br>
+            役職: 営業部長<br>
+            住所: 〒253-0065 茅ヶ崎市松尾8-51<br>
+            電話: <a href="tel:0467-83-8189">0467-83-8189</a><br>
+            FAX: 0467-83-8189<br>
+            携帯: <a href="tel:090-3098-1638">090-3098-1638</a><br>
+            メール: <a href="mailto:kobayashi@aito-inc.jp">kobayashi@aito-inc.jp</a>
+        </li>
+        <li class="contact-item">
+            <strong>望月 秀樹</strong><br>
+            会社名: 株式会社アイト<br>
+            役職: 営業<br>
+            住所: 〒253-0065 茅ヶ崎市松尾8-51<br>
+            電話: <a href="tel:0467-83-8189">0467-83-8189</a><br>
+            FAX: 0467-83-8189<br>
+            携帯: <a href="tel:090-3098-1637">090-3098-1637</a><br>
+            メール: <a href="mailto:mochizuki@aito-inc.jp">mochizuki@aito-inc.jp</a>
+        </li>
+        <li class="contact-item">
+    <strong>土屋　智昭</strong><br>
+    会社名: 株式会社アオノ<br>
+    役職: 代表取締役<br>
+    住所: 〒419-0202静岡県富士市久沢１１１９番地の８<br>
+    電話: <a href="tel:0545717071">0545-71-7071</a><br>
+    FAX: 0545717759<br>
+    携帯: <a href="tel:09073063297">090-7306-3297</a><br>
+    メール: <a href="mailto:kabu.aono@nv.tokai.or.jp">kabu.aono@nv.tokai.or.jp</a>
+</li>
+<li class="contact-item">
+    <strong>遠藤</strong><br>
+    会社名: 株式会社スエヒロ工業<br>
+    役職: なし<br>
+    住所: 〒410-0001静岡県沼津市足高２８７－２９<br>
+    電話: <a href="tel:0559234721">055-923-4721</a><br>
+    FAX: 055-923-4600<br>
+    携帯: <a href="tel:[携帯電話番号]">[携帯電話番号]</a><br>
+    メール: <a href="mailto:daisuke@suehiro-kogyou.co.jp">daisuke@suehiro-kogyou.co.jp</a>
+</li>
+<li class="contact-item">
+    <strong>池谷　将紀</strong><br>
+    会社名: 株式会社稲葉商店<br>
+    役職: 部長<br>
+    住所: 〒420-0813静岡県静岡市葵区長沼971-1<br>
+    電話: <a href="tel:0542631251">054-263-1251</a><br>
+    FAX: 054-261-6255<br>
+    携帯: <a href="tel:09032546113">090-3254-6113</a><br>
+    メール: <a href="mailto:ikegaya-kojibu@inabasyoten.co.jp">ikegaya-kojibu@inabasyoten.co.jp</a>
+</li>
+<li class="contact-item">
+    <strong>望月　高雄</strong><br>
+    会社名:阿部興業株式会社<br>
+    役職: 静岡市 支店長<br>
+    住所: 〒422-8034静岡県静岡市駿河区高松1-23-7<br>
+    電話: <a href="tel:0542381005">054-238-1005</a><br>
+    FAX: 054-236-0062<br>
+    携帯: <a href="tel:09058158729">090-5815-8729</a><br>
+    メール: <a href="mailto:takao.mochizuki@abekogyo.co.jp">takao.mochizuki@abekogyo.co.jp</a>
+</li>
+<li class="contact-item">
+    <strong>鈴木　統之</strong><br>
+    会社名: 株式会社アリア<br>
+    役職: 代表取締役<br>
+    住所: 〒424-0067静岡県静岡市清水区鳥坂142-2<br>
+    電話: <a href="tel:0543475606">54-347-5606</a><br>
+    FAX: 054-347-5607<br>
+    携帯: <a href="tel:09034216237">090-3421-6237</a><br>
+    メール: <a href="mailto:mail@aria07.jp">mail@aria07.jp</a>
+</li>
+<li class="contact-item">
+    <strong>中田　温也</strong><br>
+    会社名: 三建設備工業株式会社<br>
+    役職: <br>
+    住所: 静岡県静岡市葵区常盤町2-13-1住友生命静岡常盤町ビル7階<br>
+    電話: <a href="tel:0542558001">054-255-8001</a><br>
+    FAX: 054-252-7743<br>
+    携帯: <a href="tel:07026409996">070-2640-9996</a><br>
+    メール: <a href="mailto:a-nakata@skk.jp">a-nakata@skk.jp</a>
+</li>
+<li class="contact-item">
+    <strong>森野 雄一</strong><br>
+    会社名: 岡部株式会社<br>
+    役職: 名古屋支店静岡営業部　課長<br>
+    住所: 〒420-0035静岡県静岡市葵区七間町18-1-301<br>
+    電話: <a href="tel:0542042050">054-204-2050</a><br>
+    FAX: 054-204-2051<br>
+    携帯: <a href="tel:09070315977">090-7031-5977</a><br>
+    メール: <a href="mailto:y-morino@okabe.co.jp">y-morino@okabe.co.jp</a>
+</li>
+<li class="contact-item">
+    <strong>渡辺　靖之</strong><br>
+    会社名: ヒダ株式会社<br>
+    役職: ウォール部 部長<br>
+    住所: 〒420-0821静岡県静岡市葵区柚木570番地<br>
+    電話: <a href="tel:0542652228">054-265-2228</a><br>
+    FAX: 054-265-1545<br>
+    携帯: <a href="tel:09056190339">090-5619-0339</a><br>
+    メール: <a href="mailto:wall@hida-group.co.jp">wall@hida-group.co.jp</a>
+</li>
+<li class="contact-item">
+    <strong>岡崎　卓朗</strong><br>
+    会社名: 文化シヤッター株式会社<br>
+    役職: 中部支店静岡営業一課<br>
+    住所: 〒420-0923静岡県静岡市葵区川合3-11-14 1F<br>
+    電話: <a href="tel:0542615654">054-261-5654</a><br>
+    FAX: 054-261-1959<br>
+    携帯: <a href="tel:09060453397">090-6045-3397</a><br>
+    メール: <a href="mailto:t_okazaki@mail.bunka-s.co.jp">t_okazaki@mail.bunka-s.co.jp</a>
+</li>
+<li class="contact-item">
+    <strong>廣瀬　主典</strong><br>
+    会社名: ウィルグリーン株式会社<br>
+    役職: 代表取締役<br>
+    住所: 〒412-0042静岡県御殿場市萩原196-3<br>
+    電話: <a href="tel:0550888200">0550-88-8200</a><br>
+    FAX: 0550-88-8201<br>
+    携帯: <a href="tel:08051302334">080-5130-2334</a><br>
+    メール: <a href="mailto:kiminori-hirose@will-green.jp">kiminori-hirose@will-green.jp</a>
+</li>
+<li class="contact-item">
+    <strong>櫻井　弘紀</strong><br>
+    会社名: 株式会社スエヒロ工業<br>
+    役職: 代表取締役<br>
+    住所: 〒410-0001静岡県沼津市足高287-29<br>
+    電話: <a href="tel:0559234721">055-923-4721</a><br>
+    FAX: 055-923-4600<br>
+    携帯: <a href="tel09041115546">090-4111-5546</a><br>
+    メール: <a href="mailto:sakurai@suehiro-kogyou.co.jp">sakurai@suehiro-kogyou.co.jp</a>
+</li>
+<li class="contact-item">
+    <strong>望月　保美</strong><br>
+    会社名: 有限会社静南工房<br>
+    役職: <br>
+    住所: 〒426-0067静岡県藤枝市前島2丁目2-14-102号<br>
+    電話: <a href="tel:0546689903">054-668-9903</a><br>
+    FAX:054-668-9904<br>
+    携帯: <a href="tel:09033871200">090-3387-1200</a><br>
+    メール: <a href="mailto:y.mochizuki@seinankobo.co.jp">y.mochizuki@seinankobo.co.jp</a>
+</li>
+<li class="contact-item">
+    <strong>塚本　修</strong><br>
+    会社名: 有限会社静南工房<br>
+    役職: <br>
+    住所: 〒426-0067静岡県藤枝市前島2丁目2-14-102号<br>
+    電話: <a href="tel:0546689903">054-668-9903</a><br>
+    FAX:054-668-9904<br>
+    携帯: <a href="tel:09042518609">090-4251-8609</a><br>
+    メール: <a href="o.tsukamoto@seinankobo.co.jp">o.tsukamoto@seinankobo.co.jp</a>
+</li>
+<li class="contact-item">
+    <strong>渡井　克年</strong><br>
+    会社名: 関東電気保安協会<br>
+    役職: 御殿場支所 電気技師<br>
+    住所: 〒412-0043静岡県御殿場市新橋1609-1<br>
+    電話: <a href="tel:0550831155">0550-83-1155</a><br>
+    FAX:0550-82-7905<br>
+    携帯: <a href="tel:09014787960">090-1478-7960</a><br>
+    メール: <a href="mailto:katsutoshi-watai@kdh.or.jp">katsutoshi-watai@kdh.or.jp</a>
+</li>
+<li class="contact-item">
+    <strong>畑中　俊也</strong><br>
+    会社名: アクシス株式会社<br>
+    役職: 営業部営業三課<br>
+    住所: 〒166-0004東京都杉並区阿佐ヶ谷南1-33-1-2F<br>
+    電話: <a href="tel:0353777781">03-5377-7781</a><br>
+    FAX: 03-5377-7782<br>
+    携帯: <a href="tel:08021292345">080-2129-2345</a><br>
+    メール: <a href="mailto:toshiya-hatanaka@axis.slit.com">toshiya-hatanaka@axis.slit.com</a>
+</li>
+    </ul>  
+
+
+    <script>
+        function searchContacts() {
+            // 入力されたキーワードを取得し、大文字・小文字を区別しないように小文字に変換
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            // 連絡先リストのUL要素を取得
+            var ul = document.getElementById('contactList');
+            // 各連絡先アイテム（LI要素）を取得
+            var li = ul.getElementsByClassName('contact-item');
+
+            // 各連絡先アイテムをループ処理
+            for (var i = 0; i < li.length; i++) {
+                var contactItem = li[i];
+                // 連絡先アイテムのテキストコンテンツを取得し、小文字に変換
+                var text = contactItem.textContent || contactItem.innerText;
+                text = text.toLowerCase();
+
+                // キーワードが連絡先アイテムのテキストに含まれているかチェック
+                if (text.includes(input)) {
+                    // 含まれていれば表示
+                    contactItem.style.display = '';
+                } else {
+                    // 含まれていなければ非表示
+                    contactItem.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
