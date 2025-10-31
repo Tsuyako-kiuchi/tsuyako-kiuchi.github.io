@@ -10,18 +10,27 @@
             margin: 20px;
             background-color: #f4f4f4;
             color: #333;
+            /* 固定された検索バーの高さ分、上部にパディングを追加 */
+            padding-top: 90px; /* 検索バーの高さに合わせて調整 */
         }
         h1 {
             color: #0056b3;
         }
         .search-container {
-            margin-bottom: 20px;
-            padding: 15px;
+            /* 検索バーを画面上部に固定 */
+            position: fixed;
+            top: 0;
+            left: 0; /* 左端に配置 */
+            width: 100%;
+            padding: 15px 20px; /* 左右のパディングを追加 */
             background-color: #e9ecef;
-            border-radius: 5px;
+            border-bottom: 1px solid #ccc; /* 下線を追加して区切りを明確に */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 影を追加 */
+            z-index: 1000; /* 他の要素より手前に表示 */
             display: flex;
             gap: 10px;
             align-items: center;
+            box-sizing: border-box; /* パディングとボーダーをwidthに含める */
         }
         .search-container input[type="text"] {
             flex-grow: 1;
